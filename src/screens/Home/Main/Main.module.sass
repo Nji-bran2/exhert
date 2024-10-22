@@ -1,0 +1,128 @@
+@import ../../../styles/helpers
+
+.main
+    position: relative
+    padding-top: 160px
+    display: flex
+    overflow: hidden
+    +d
+        padding-top: 80px
+    +m
+        padding-top: 32px
+        
+.wrap
+    position: relative
+    z-index: 3
+    max-width: 913px
+    margin-bottom: 143px
+    +p
+        width: 50%
+    +d
+        margin-bottom: 80px
+        width: 50%
+    +t
+        width: 50%  
+    +m
+        width: 100%
+        text-align: center 
+        
+
+.title
+    margin-bottom: 20px
+.txt
+    color: $n9
+
+.text
+    margin-bottom: 32px
+    +body-2
+    +t
+        max-width: 400px
+    +m   
+        max-width: 100%
+.tex
+    margin: 30px 0
+    +body-2
+         
+
+.socialLink
+    margin-top: 30px
+    display: flex
+    align-items: center
+    width: 100% 
+    +m
+       width: 70% 
+    +s
+        width: 100%    
+        
+.titl
+    margin-top: 20px
+
+.socials
+    display: flex
+    justify-content: center
+    margin-top: 15px
+    margin-left: 50px
+    +m
+        margin-right: none
+
+.social
+    display: flex
+    background-color: rgba(0, 0, 0, 0.1)
+    border-radius: 100%
+    justify-content: center
+    align-items: center
+    flex-shrink: 0
+    width: 30px
+    height: 30px
+    transition: all .2s
+    +dark
+        color: $white
+        background-color: $n2 
+    svg
+        fill: $d1
+        +dark
+            fill: $n9
+        transition: fill .2s
+
+    &:hover 
+        background-color: rgba(0, 0, 0, 0.3)
+        svg
+            fill: $d1
+            +dark
+                fill: $n9
+    &:not(:last-child)
+        margin-right: 24px
+          
+
+
+
+.button
+    margin-bottom: 80px
+    +d
+        margin-bottom: 0
+    +m
+       width: 100%   
+
+.scroll
+    +d
+        display: none !important
+    
+.bg
+    position: absolute
+    top: -200px
+    right: calc(50% - 750px)
+    width: 913px
+    pointer-events: none
+    +d
+        top: -120px
+        right: calc(50% - 550px)
+        width: 600px
+    +t
+        right: calc(50% - 500px)
+    +m
+        position: static
+        width: auto
+        +s
+            margin: 0 -64px
+    img
+        width: 100%

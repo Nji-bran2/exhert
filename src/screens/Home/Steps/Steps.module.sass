@@ -1,0 +1,47 @@
+@import ../../../styles/helpers
+
+.container
+  max-width: 1232px
+  .head
+    max-width: 545px
+    margin: 0 auto 80px
+    text-align: center
+    +t
+      margin-bottom: 48px
+    +m
+      margin-bottom: 24px
+  .list
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    gap: 20px // Add this line to create a gap between items
+    .slick-slide
+      padding: 10px
+.item
+      flex: 1 0 21% // for large screens
+      box-sizing: border-box
+      margin-bottom: 20px
+      text-align: center
+      .preview
+        width: 100%
+        margin-bottom: 10px
+        img
+          max-width: 100%
+          height: auto
+      .number, .subtitle, .content
+        margin-bottom: 10px
+
+// For tablet screens
+@media (max-width: 1024px)
+  .container
+    .list
+      .item
+        flex: 1 0 45% // 2 items per row
+
+// For mobile screens
+@media (max-width: 600px)
+  .container
+    .list
+      .item
+        flex: 1 0 90% // 1 item per row
+        margin: auto // Center the item horizontally

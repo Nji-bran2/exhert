@@ -1,0 +1,70 @@
+@import ../../../styles/helpers
+
+
+.newsletter-section 
+   position: relative
+    background-size: 100% 100%
+    background-repeat: no-repeat
+    background-position: center right
+    hieght: 120px
+    width: 100%
+    z-index: 2
+
+.gradientOverlay
+  width: 100%
+  height: 100%
+  background-image: linear-gradient(to right, $d1 0%, rgba(22, 28, 36, 0) 100%)
+  +m
+     background-image: linear-gradient( $d1 0.5)
+      
+ 
+
+.col
+    display: block
+    padding: 80px 86px 64px
+    +x
+        flex: 0 0 50%
+        padding: 80px 64px 64px
+    +d
+        display: flex 
+        flex: 0 0 34%
+    +t
+        padding: 64px 32px 48px
+    +m
+        padding: 32px 0
+        border-bottom: 1px solid $n6
+        +dark
+            border-color: $n2
+    &:first-child
+        display: block
+        padding-left: 0
+        +d
+            display: block
+        +m
+            display: block
+    &:nth-child(3)
+        padding-right: 0
+    &:nth-child(2),
+    &:nth-child(3)
+        border-left: 1px solid $n6
+        +m
+            border-left: none
+        +dark
+            border-color: $n2
+.category
+    margin-bottom: 20px
+    +hairline-1
+    color: $n9
+
+.info
+    +caption-1
+    p
+        &:not(:last-child)
+            margin-bottom: 8px
+    &:not(:last-child)
+        margin-bottom: 24px
+    color: $white
+.form
+    width: 50%
+    +m
+       width: 100%        
