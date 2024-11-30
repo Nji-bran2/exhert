@@ -4,29 +4,39 @@
     position: relative
     display: flex
     align-items: center
-    min-height: 908px
-    padding: 136px 0
+    justify-content: space-between
+    min-height: 400px
+    padding: 50px 0
     +d
-        min-height: 764px
+        min-height: 380px
         padding: 112px 0
     +m
+        flex-direction: column
         min-height: auto
-        padding: 20px 0 64px
+        padding: 10px 0 24px
+
+.container
+    display: flex
+    justify-content: space-between
+    align-items: center
+    width: 100%
+    +m
+        flex-direction: column
 
 .wrap
     position: relative
     z-index: 3
-    max-width: 450px
+    max-width: 50%
     +t
-        max-width: 300px
+        max-width: 40%
     +m
-        max-width: 100%  
+        max-width: 100%
+        text-align: center
 
 .title
     margin-bottom: 16px
     +m
-        text-align: center 
-
+        text-align: center
 
 .info
     margin-bottom: 64px
@@ -34,7 +44,18 @@
     color: $n4
     +m
         margin-bottom: 48px
-        text-align: center 
+        text-align: center
+
+.asap
+    display: flex
+    flex-direction: column
+    gap: 20px
+    width: 50%
+    +m
+        width: 100%
+
+.order-form
+    width: 100%
 
 .item
     display: flex
@@ -109,4 +130,4 @@
         margin-right: -32px
     img
         width: 80%
-        hieght: 50%
+        height: 50%

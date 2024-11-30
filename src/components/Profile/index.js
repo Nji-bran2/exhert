@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import cn from "classnames";
 import styles from "./Profile.module.sass";
-import { NavLink, withRouter, useLocation } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import Icon from "../Icon";
 import Breadcrumbs from "../Breadcrumbs";
 
@@ -89,4 +89,4 @@ const Proflie = ({ title, breadcrumbs, children }) => {
   );
 };
 
-export default withRouter(Proflie);
+export default Proflie;

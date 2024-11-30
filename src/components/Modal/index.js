@@ -3,10 +3,10 @@ import { createPortal } from "react-dom";
 import { disableBodyScroll, clearAllBodyScrollLocks } from "body-scroll-lock";
 import OutsideClickHandler from "react-outside-click-handler";
 import cn from "classnames";
-import styles from "./Modal.module.sass";
+import styles from "./Modal.module.sass";  // Assuming you have some basic modal styles
 import Icon from "../Icon";
 
-const Modal = ({ outerClassName, visible, onClose, children, title }) => {
+const Modal = ({ outerClassName, visible, onClose, children, title, style }) => {
   const escFunction = useCallback(
     (e) => {
       if (e.keyCode === 27) {
@@ -24,18 +24,23 @@ const Modal = ({ outerClassName, visible, onClose, children, title }) => {
   }, [escFunction]);
 
   useEffect(() => {
+    const target = document.querySelector("#modal");
+
     if (visible) {
-      const target = document.querySelector("#modal");
       disableBodyScroll(target);
     } else {
       clearAllBodyScrollLocks();
     }
+
+    return () => {
+      clearAllBodyScrollLocks();
+    };
   }, [visible]);
 
   return createPortal(
     visible && (
       <div id="modal" className={styles.modal}>
-        <div className={cn(styles.outer, outerClassName)}>
+        <div className={cn(styles.outer, outerClassName)} style={style}>
           <OutsideClickHandler onOutsideClick={onClose}>
             {title && (
               <div className={cn("h4", styles.title)}>

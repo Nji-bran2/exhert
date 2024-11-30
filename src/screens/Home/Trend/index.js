@@ -7,12 +7,12 @@ import { AreaChart, Area, ResponsiveContainer } from "recharts";
 
 const navigation = [
   "All",
-  // "DeFi",
-  // "Innovation",
-  // "POS",
-  // "NFT",
-  // "POW",
-  // "Storage",
+  "DeFi",
+  "Innovation",
+  "POS",
+  "NFT",
+  "POW",
+  "Storage",
 ];
 
 const items = [
@@ -126,7 +126,7 @@ const Learn = () => {
       <div className={cn("container", styles.container)}>
         <div className={styles.line}>
           <h2 className={cn("h2", styles.title)}>Market trend</h2>
-          <Link className={cn("button-stroke", styles.button)} to="/market">
+          <Link className={cn("button-stroke", styles.button)} to="/advert">
             View more
           </Link>
         </div>
@@ -182,7 +182,7 @@ const Learn = () => {
                 {x.negative && (
                   <div className={styles.negative}>{x.negative}</div>
                 )}
-              </div>
+            </div>
               <div className={styles.col}>
                 <div className={styles.chart}>
                   <ResponsiveContainer width="100%" height="100%">
@@ -230,7 +230,7 @@ const Learn = () => {
               </div>
               <div className={styles.col}>
                 <button
-                  className={cn("button-stroke button-small", styles.button)}
+                  className={cn("", styles.button)}
                 >
                   Trade
                 </button>

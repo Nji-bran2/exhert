@@ -5,6 +5,7 @@ import EnterAmount from "./EnterAmount";
 import PaymentInfo from "./PaymentInfo";
 import ConfirmOrder from "./ConfirmOrder";
 import Popular from "../../components/Popular";
+import OrderForm from "../../components/OrderForm";
 
 const steps = [
   "Select crypto",
@@ -19,7 +20,7 @@ const BuyCrypto = () => {
   return (
     <>
       <Bidding title="Buy crypto" items={steps} activeIndex={activeIndex}>
-        {activeIndex === 0 && <SelectCrypto goNext={() => setActiveIndex(1)} />}
+        {activeIndex === 0 && <OrderForm goNext={() => setActiveIndex(1)} />}
         {activeIndex === 1 && (
           <EnterAmount
             goBack={() => setActiveIndex(0)}

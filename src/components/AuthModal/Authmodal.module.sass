@@ -1,0 +1,151 @@
+@import ../../styles/helpers
+
+
+.modal
+  display: flex
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  padding: 48px
+  background: rgba($n1,.3)
+  opacity: 0
+  animation: showModal .4s forwards
+  overflow: auto
+  z-index: 999
+  +m
+    padding: 16px 8px
+  +dark
+    background: rgba($n1,.75)
+
+@keyframes showModal
+  0%
+    opacity: 0
+  100%
+    opacity: 1
+
+
+.container 
+  display: flex
+  width: auto
+  max-width: 900px
+  background: $n8
+  border-radius: 20px
+  box-shadow: 0px 64px 64px -48px rgba(31, 47, 70, 0.12)
+  overflow: hidden
+  +dark
+    background: $n2
+  +m
+    box-shadow: none
+  & > div
+    padding: 32px
+    +m
+      padding: 32px 16px
+
+    
+  
+
+.modalContent 
+    display: flex
+    justify-content: space-between
+    +dark
+      background: $n2
+    +m
+     box-shadow: none
+    & > div
+     padding: 32px
+    +m
+      padding: 32px 16px
+
+.imageSection 
+  display: flex
+  width: 50%
+  justify-content: center
+  align-items: center
+  overflow: hidden
+  padding: 1rem
+  +m
+    display: none
+    
+    
+
+.formSection 
+  padding: 2rem
+  width: 50%
+  position: relative
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2) /* Shadow effect */
+  border-radius: 8px
+  z-index: 10
+
+.backButton 
+  position: absolute
+  top: 1rem
+  left: 1rem
+  background: none
+  color: $n9
+  padding: 0.5rem 1rem
+  border-radius: 50%
+  border: 2px solid $n6
+  cursor: pointer
+      
+.header 
+  margin-bottom: 1.5rem
+  text-align: center
+
+.header h3 
+  margin: 0
+  color: $white        
+
+.header p 
+  margin: 0.5rem 0
+  font-size: 0.9rem
+  color: #333
+
+
+.logo
+    position: absolute
+    top: 64px
+    left: 80px
+    width: 156px
+    +w
+        top: 48px
+        left: 64px
+    +m
+        top: 40px
+        left: 50%
+        transform: translateX(-50%)
+    img
+        width: 100%
+        &:first-child
+            display: none
+            +t
+                display: inline-block
+                +dark
+                    display: none
+        &:nth-child(2)
+            +t
+                display: none
+                +dark
+                    display: inline-block
+                       
+        
+.link 
+  margin-left: 5px
+  color: $p1
+  transition: color .2s
+  &:hover
+        color: darken($p1, 10)
+
+        
+      
+
+.wrap 
+  display: flex
+  flex-direction: column
+      
+.footer 
+  margin-top: auto
+  text-align: center   
+  
+

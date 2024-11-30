@@ -9,6 +9,9 @@ import Steps from "./Steps";
 import Newsletter from "./News";
 import AboutUs from "./about";
 import Feature from "./Features";
+import Market from "../p2p";
+import OrderForm from "../../components/OrderForm";
+import P2PMarket from "./P2PTable";
 
 const Home = () => {
    const scrollToRef = useRef(null);
@@ -16,13 +19,15 @@ const Home = () => {
   return (
     <>
       <Main />
-      <Learn scrollToRef={scrollToRef} />
       <AboutUs/>
+      <Learn scrollToRef={scrollToRef} />
+      
       <Trend />
       <Popular classSection="section-bg section-mb0" />
       <Download />
       <News classSection="section-bg" />
       <Steps />
+
       <Feature/>
     </>
   );

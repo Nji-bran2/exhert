@@ -9,6 +9,13 @@ import Icon from "../Icon";
 import Notifications from "./Notifications";
 import Theme from "../Theme";
 import User from "./User";
+import Authmodal from "../AuthModal";
+import Login from "../Login";
+import Form from "../../screens/SignIn/Form";
+import SignInForm from "../../screens/SignUp/Form";
+import Modal from "../Modal";
+import SignIn from "../../screens/SignIn";
+import SignUp from "../../screens/SignUp";
 
 const navigation = [
   // {
@@ -46,6 +53,28 @@ const navigation = [
 
 const Header = ({ headerWide }) => {
   const [visibleNav, setVisibleNav] = useState(false);
+  const [modalVisible, setModalVisible] = useState(false);
+  const [modalContent, setModalContent] = useState(null);
+  const [modalType, setModalType] = useState("signIn"); // Track the type of modal
+
+  const openModal = (contentType) => {
+    setModalVisible(true);
+    setModalContent(contentType);
+  };
+
+  const closeModal = () => {
+    setModalVisible(false);
+    setModalContent(null);
+  };
+
+  const switchToSignUp = () => {
+    setModalContent("signup");
+  };
+
+  // Switch to SignIn form
+  const switchToSignIn = () => {
+    setModalContent("signin");
+  };
 
   return (
     <header className={cn(styles.header, { [styles.wide]: headerWide })}>
@@ -146,7 +175,7 @@ const Header = ({ headerWide }) => {
               to="/sign-up"
               onClick={() => setVisibleNav(false)}
             >
-              Get Early Access
+              SIgnin
             </Link>
             <Link
               className={cn("button-stroke button-small", styles.button)}
@@ -156,12 +185,22 @@ const Header = ({ headerWide }) => {
             >
               Login
             </Link>
+            {/* <button 
+            className={cn("button-stroke button-small", styles.button)}
+              activeClassName={styles.active}
+            onClick={() => openModal("signUp")}>Get Early Access</button>
+            <button onClick={() => openModal("signIn")}>Login</button> */}
           </div>
-          <button
+          {/* <button
             className={cn(styles.burger, { [styles.active]: visibleNav })}
             onClick={() => setVisibleNav(!visibleNav)}
-          ></button>
+          ></button> */}
        </div>
+       <Modal visible={modalVisible} onClose={closeModal} title="Authentication"
+       outerClassName={styles.customModal}
+       >
+         <SignIn />
+      </Modal>
       </div>
     </header>
   );

@@ -15,8 +15,9 @@
     &.wide
         box-shadow: none
         .container
+            width: 100%
             max-width: 100%
-            padding: 0 20px
+            padding: 0 
             +m
                 padding: 0 24px
 
@@ -27,7 +28,7 @@
     +d
         padding: 0 40px
     +t
-        padding: 0 40px
+        padding: 0 
     +m
         padding: 0 24px
 
@@ -239,3 +240,11 @@
             transform: translateY(-4px)
         &:after
             transform: translateY(3px)
+
+.customModal
+    width: 90%
+    max-width: 1200px
+    margin: 0 auto
+    overflow-y: auto
+    +m 
+        margin: 0 

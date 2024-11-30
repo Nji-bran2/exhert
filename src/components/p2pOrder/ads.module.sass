@@ -1,0 +1,21 @@
+@import ../../styles/helpers
+
+.details 
+    display: flex
+    align-items: center
+    padding: 20px
+
+.info
+    display: block
+
+
+.line
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+    &:not(:last-child)
+        margin-bottom: 12px
+        padding-bottom: 12px
+        border-bottom: 1px solid $n6
+        +dark
+            border-color: $n3

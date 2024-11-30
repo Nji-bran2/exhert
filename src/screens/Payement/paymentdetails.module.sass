@@ -1,0 +1,162 @@
+@import ../../styles/helpers
+
+.customModal
+    width: 90%
+    max-width: 1200px
+    margin: 0 auto
+    +m 
+        margin: 0 
+
+
+.container 
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  align-items: flex-start
+  padding: 20px
+  gap: 20px
+  width: 100%
+  margin: 0 auto
+  +m
+    width: 100%
+    flex-direction: column
+    align-items: center 
+    margin-right: 0
+    padding: auto
+
+
+.sectionLeft 
+  display: flex
+  flex-direction: column 
+  gap: 20px
+  width: 100% 
+  +m 
+    width: 100%
+  
+
+.sectionRight 
+  display: flex
+  flex-direction: column
+  gap: 20px
+  width: 100% 
+
+  +m 
+    width: 100% 
+  
+
+.header 
+  display: flex
+  justify-content: space-between
+  width: 100%
+  align-items: center
+  
+  .info 
+    display: flex
+    align-items: center
+    
+    .avatar 
+      background-color: $n9
+      border-radius: 50%
+      width: 40px
+      height: 40px
+      display: flex
+      align-items: center
+      justify-content: center
+      margin-right: 10px
+        
+    h3 
+      margin: 0
+    
+    p 
+      font-size: 0.9rem
+      color: #888
+        
+  .closeButton 
+    display: none 
+    background: none
+    border: none
+    font-size: 24px
+    cursor: pointer
+    
+  +m 
+    .closeButton 
+      display: block
+      
+
+.details 
+  display: flex
+  flex-direction: column
+  gap: 16px 
+
+
+.infoItem 
+  display: flex
+  justify-content: space-between 
+  align-items: center 
+
+
+.infoItem strong 
+  margin-right: 20px  
+
+
+.infoItem span 
+  font-weight: normal  
+
+
+.about 
+  display: flex
+  flex-direction: column
+  gap: 10px
+  +m 
+        font-size: 12px
+  
+  h4 
+    font-size: 1.2rem
+    +m 
+        font-size: 12px
+    
+  p 
+    font-size: 1rem
+    color: #555
+    +m 
+        font-size: 12px
+  
+
+.form 
+  display: flex
+  flex-direction: column
+  gap: 10px
+  
+  label 
+    font-weight: bold
+    
+  input 
+    padding: 10px
+    border: 1px solid #ddd
+    border-radius: 5px
+  
+  .actions 
+    display: flex
+    justify-content: space-between
+    gap: 10px
+    
+  .sellButton 
+    padding: 10px 20px
+    background-color: #28a745
+    color: white
+    border: none
+    border-radius: 5px
+    cursor: pointer
+    +m 
+        width: 100%
+    
+  .close
+    padding: 10px 20px
+    background-color: #dc3545
+    color: white
+    border: none
+    border-radius: 5px
+    cursor: pointer
+    +m 
+        display: none
+  

@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./styles/app.sass";
 import Page from "./components/Page";
 import Home from "./screens/Home";
@@ -26,229 +26,255 @@ import SignIn from "./screens/SignIn";
 import SignUp from "./screens/SignUp";
 import ForgotPassword from "./screens/ForgotPassword";
 import PageList from "./screens/PageList";
+import Adverts from "./screens/p2p";
+import Layout from "./components/Layout";
+import AboutUs from "./screens/Asap/about";
 
 function App() {
   return (
     <Router>
-      <Switch>
+      <Routes>
         <Route
           exact
           path="/"
-          render={() => (
+          element={  
             <Page>
               <Home />
             </Page>
-          )}
+          }
         />
         <Route
           exact
           path="/market"
-          render={() => (
+          element={  
             <Page>
               <Market />
             </Page>
-          )}
+          }
         />
+        
+        <Route
+          path="/p2p"  
+          element={
+            <Page>
+              <Layout>
+                <Adverts />  
+              </Layout>
+            </Page>
+          }
+        />
+
+        <Route
+          path="/asap"  
+          element={
+            <Page>
+              <Layout>
+                <AboutUs />  
+              </Layout>
+            </Page>
+          }
+        />
+
         <Route
           exact
           path="/learn-crypto"
-          render={() => (
+          element={  
             <Page>
               <LearnCrypto />
             </Page>
-          )}
+          }
         />
         <Route
           exact
           path="/learn-crypto-details"
-          render={() => (
+          element={  
             <Page>
               <LearnCryptoDetails />
             </Page>
-          )}
+          }
         />
         <Route
           exact
           path="/contact"
-          render={() => (
+          element={  
             <Page>
               <Contact />
             </Page>
-          )}
+          }
         />
         <Route
           exact
           path="/notifications"
-          render={() => (
+          element={  
             <Page>
               <Notifications />
             </Page>
-          )}
+          }
         />
         <Route
           exact
           path="/activity"
-          render={() => (
+          element={  
             <Page>
               <Activity />
             </Page>
-          )}
+          }
         />
         <Route
           exact
           path="/exchange"
-          render={() => (
+          element={  
             <Page headerWide footerHide>
               <Exchange />
             </Page>
-          )}
+          }
         />
         <Route
           exact
           path="/wallet-overview"
-          render={() => (
+          element={  
             <Page headerWide footerHide>
               <WalletOverview />
             </Page>
-          )}
+          }
         />
         <Route
           exact
           path="/wallet-overview/:id"
-          render={() => (
+          element={  
             <Page headerWide footerHide>
               <WalletOverviewDetails />
             </Page>
-          )}
+          }
         />
         <Route
           exact
           path="/wallet-margin"
-          render={() => (
+          element={  
             <Page headerWide footerHide>
               <WalletMargin />
             </Page>
-          )}
+          }
         />
         <Route
           exact
           path="/fiat-and-spot"
-          render={() => (
+          element={  
             <Page headerWide footerHide>
               <FiatAndSpot />
             </Page>
-          )}
+          }
         />
         <Route
           exact
           path="/profile-info"
-          render={() => (
+          element={  
             <Page>
               <ProfileInfo />
             </Page>
-          )}
+          }
         />
         <Route
           exact
           path="/deposit-fiat"
-          render={() => (
+          element={  
             <Page>
               <DepositFiat />
             </Page>
-          )}
+          }
         />
         <Route
           exact
           path="/buy-crypto"
-          render={() => (
+          element={  
             <Page>
               <BuyCrypto />
             </Page>
-          )}
+          }
         />
         <Route
           exact
           path="/sell-crypto"
-          render={() => (
+          element={  
             <Page>
               <SellCrypto />
             </Page>
-          )}
+          }
         />
         <Route
           exact
           path="/referrals"
-          render={() => (
+          element={  
             <Page>
               <Referrals />
             </Page>
-          )}
+          }
         />
         <Route
           exact
           path="/api-keys"
-          render={() => (
+          element={  
             <Page>
               <ApiKeys />
             </Page>
-          )}
+          }
         />
         <Route
           exact
           path="/sessions-and-login-history"
-          render={() => (
+          element={  
             <Page>
               <SessionsAndLoginHistory />
             </Page>
-          )}
+          }
         />
         <Route
           exact
           path="/2fa"
-          render={() => (
+          element={  
             <Page>
               <TwoFa />
             </Page>
-          )}
+          }
         />
         <Route
           exact
           path="/change-password"
-          render={() => (
+          element={  
             <Page>
               <ChangePassword />
             </Page>
-          )}
+          }
         />
         <Route
           exact
           path="/sign-in"
-          render={() => (
+          element={  
             <Page headerHide footerHide>
               <SignIn />
             </Page>
-          )}
+          }
         />
         <Route
           exact
           path="/sign-up"
-          render={() => (
+          element={  
             <Page headerHide footerHide>
               <SignUp />
             </Page>
-          )}
+          }
         />
         <Route
           exact
           path="/forgot-password"
-          render={() => (
+          element={  
             <Page headerHide footerHide>
               <ForgotPassword />
             </Page>
-          )}
+          }
         />
-        <Route exact path="/pagelist" component={PageList} />
-      </Switch>
+        <Route exact path="/pagelist" element={<PageList />}/>
+      </Routes>
     </Router>
   );
 }

@@ -76,7 +76,14 @@ const Form = ({ onScan }) => {
           Forgot password?
         </Link>
       </div>
-      <button className={cn("button", styles.button)}>Login</button>
+      <Link className={cn("button", styles.button)} to="/p2p">
+           
+      {/* <button className={cn("button", styles.button) */}
+
+      
+      Login
+      {/* </button> */}
+       </Link>
     </form>
   );
 };

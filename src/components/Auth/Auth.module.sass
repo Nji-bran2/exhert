@@ -1,0 +1,74 @@
+@import ../../styles/helpers
+
+.section
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 100vw
+    height: 100vh
+    background-color: rgba(0, 0, 0, 0.1)
+    margin: auto
+
+.container
+    display: flex
+    justify-content: space-between
+    align-items: center
+    width: 70%
+    height: 90%
+    background-color: $white
+    padding: 20px 15px 20px 15px
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1)
+    border-radius: 20px
+    overflow: hidden
+    margin: auto
+
+.colleft
+    width: 40%
+    height: 100vh
+    display: flex
+    justify-content: center
+    align-items: center
+    z-index: 100
+    border-radius: 20px
+    background-color: rgba(0, 0, 0, 0.1)
+
+.colright
+    width: 60%
+    padding: 20px
+    display: flex
+    justify-content: center   
+    text-align: center
+    margin-right: 10px
+    align-items: center
+
+
+.header
+    position: absolute
+    top: 80px
+    right: 50px
+    left: 50px
+    text-align: right
+    +button-2
+    +w
+        top: 50px
+        right: 150px
+        left: 24px
+    +t
+        right: 300px
+    +m
+        position: static
+        margin-bottom: 32px
+        text-align: center
+
+.link
+    margin-left: 5px
+    color: $p1
+    transition: color .2s
+    &:hover
+        color: darken($p1, 10)
+
+.wrap
+    width: 380px
+    margin: auto
+    +a
+        width: 100%    

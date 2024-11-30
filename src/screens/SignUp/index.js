@@ -5,20 +5,22 @@ import Login from "../../components/Login";
 import Form from "./Form";
 import Confirm from "./Confirm";
 import Code from "./Code";
+import SignInForm from "./Form";
+import AuthModal from "../../components/AuthModal";
 
-const SignUp = () => {
+const SignUp = ({switchToSignIn}) => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
     <Login
-      // content="Already have an account?"
-      // linkText="Login"
-      // linkUrl="/sign-in"
+      content="Already have an account?"
+      linkText="Login"
+      linkUrl="/sign-in"
+      onLinkClick={switchToSignIn} 
     >
-      {/* {activeIndex === 0 && <Form 
-      // goNext={() => setActiveIndex(1)} 
-      />} */}
-      <Form/>
+      {activeIndex === 0 && <Form 
+      goNext={() => setActiveIndex(1)} 
+      />}
       {activeIndex === 1 && <Confirm goNext={() => setActiveIndex(2)} />}
       {activeIndex === 2 && <Code />}
     </Login>
@@ -26,3 +28,24 @@ const SignUp = () => {
 };
 
 export default SignUp;
+
+// const SignUp = () => {
+//   const [activeIndex, setActiveIndex] = useState(0);
+
+//   return (
+//     <AuthModal
+//       content="Already have an account?"
+//       linkText="Login"
+//       linkUrl="/sign-in"
+//     >
+//       {/* {activeIndex === 0 && <Form 
+//       // goNext={() => setActiveIndex(1)} 
+//       />} */}
+//       <SignInForm/>
+//       {activeIndex === 1 && <Confirm goNext={() => setActiveIndex(2)} />}
+//       {activeIndex === 2 && <Code />}
+//     </AuthModal>
+//   );
+// };
+
+// export default SignUp;

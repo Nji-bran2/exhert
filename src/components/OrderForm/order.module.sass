@@ -1,0 +1,117 @@
+@import "../../styles/helpers"
+
+.container
+    display: flex
+    flex-direction: column
+    padding: 20px
+    width: 100%
+    border-radius: 24px
+    background: $n7
+    +m
+        margin: 0
+        display: block
+        width: 100%
+    +dark
+        background: $n2
+
+.info        
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+    width: 100%
+    +m
+        flex-direction: column
+
+.title
+    margin-right: auto
+    +m
+        margin: 0 
+        font-size: 16px
+        line-height: 25px
+
+.tabs
+    display: flex
+    margin-bottom: 20px
+
+.tab
+    flex: 1
+    padding: 10px 20px
+    font-size: 16px
+    text-align: center
+    border-radius: 8px
+    border: none
+    background: $n6
+    color: $n2
+    cursor: pointer
+    transition: background-color 0.3s, color 0.3s
+
+    &.activeBuy
+        background: #007BFF // Blue background for Buy
+        color: white
+
+    &.activeSell
+        background: #FF0000 // Red background for Sell
+        color: white
+
+.form
+    display: flex 
+    flex-direction: column
+    width: 50%
+    +m 
+        width: 100%
+
+.inputform
+    position: relative
+    display: flex
+    flex-direction: column
+    padding: 10px 14px
+    border: 2px solid $n6
+    border-radius: 8px
+    margin-bottom: 20px
+    transition: border-color .2s
+    &:focus-within 
+        border-color: $p1
+
+.inputGroup
+    display: flex
+    
+
+.input
+    flex: 1
+    height: 60px
+    border: none
+    background: none
+    color: $n2
+    padding: 0 14px
+    font-size: 1rem
+    outline: none
+    +placeholder
+        color: $n4
+
+.result
+    margin-left: 10px
+    font-size: 1rem
+    color: $n1
+    +dark 
+        color: $n8
+
+
+.button
+    width: 100%
+    padding: 15px
+    font-size: 16px
+    font-weight: bold
+    border: none
+    border-radius: 8px
+    cursor: pointer
+    transition: background-color 0.3s
+
+    &.buyButton
+        background: #007BFF // Blue background for Buy button
+        color: white
+        transition: background-color 0.3s ease
+
+    &.sellButton
+        background: #FF0000 // Red background for Sell button
+        color: white
+        transition: background-color 0.3s ease

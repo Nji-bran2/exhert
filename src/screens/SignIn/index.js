@@ -6,7 +6,7 @@ import Icon from "../../components/Icon";
 import Form from "./Form";
 import Scan from "./Scan";
 
-const SignIn = () => {
+const SignIn = ({ switchToSignUp }) => {
   const [scan, setScan] = useState(false);
 
   return (
@@ -14,17 +14,18 @@ const SignIn = () => {
       content="Don’t have an account?"
       linkText="Sign up for free"
       linkUrl="/sign-up"
+      onLinkClick={switchToSignUp}
     >
       <div className={styles.login}>
         <div className={styles.top}>
-          <h3 className={cn("h3", styles.title)}>Sign in to Exhert</h3>
+          <h3 className={cn("h3", styles.title)}>Sign in to BitCloud</h3>
           <div className={styles.info}>
             Please ensure you are visiting the correct url.
           </div>
           <div className={styles.correct}>
             <Icon name="lock" size="24" />
             <div className={styles.url}>
-              https://<span>accounts.exhert.com/login</span>
+              https://<span>accounts.bitcloud.com/login</span>
             </div>
           </div>
         </div>

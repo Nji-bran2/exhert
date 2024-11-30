@@ -1,0 +1,55 @@
+.input-field 
+  display: flex
+  flex-direction: column
+  margin: 10px 0
+  width: 100% // Ensure the component takes full width of its container
+
+  .input-label 
+    font-size: 14px
+    margin-bottom: 5px
+    color: #333
+  
+
+  .input-container 
+    display: flex
+    align-items: center
+    width: 100% // Ensure container stretches across full width
+
+    .input 
+      flex: 1 // Make the input field take up available space
+      padding: 8px
+      border: 1px solid #ccc
+      border-radius: 4px
+      font-size: 14px
+      height: auto // Adjust height automatically
+      width: 100% // Ensure it fills allocated width
+
+      &.resizable 
+        resize: horizontal
+        overflow: auto
+      
+    
+    
+    .dropdown 
+      width: 20% // Restrict dropdown width to at most 20%
+      margin-left: 8px
+      font-size: 14px
+      height: auto // Same height as input
+      display: flex
+      align-items: center
+      justify-content: center
+      background: none
+      cursor: pointer
+    
+
+    .inline
+      width: 20% 
+      margin-left: 8px
+      font-size: 14px
+      height: auto 
+      display: flex
+      align-items: center
+      justify-content: center
+      color: #555
+  
+
